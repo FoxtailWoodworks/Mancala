@@ -253,7 +253,9 @@ def main():
                 computer_free_turn = True
                 value = 0
                 value, computer_free_turn = computer_move(best_move, value)
-                x = input("Press 'Enter' to continue")
+                print()
+                print("Computer's turn")
+                x = input("Press 'Enter' to continue:")
                 print("This is computer's move.")
                 display_board()
                 is_game_over()
@@ -272,7 +274,7 @@ def main():
             humans_free_turn = False
             ok = False
             while not ok:
-                human_move = input("Your turn: ")
+                human_move = input("Your turn: Enter a number between 1 and 6: ")
                 if human_move.isdigit():
                     human_move = int(human_move)
                     if human_move < 7 and human_move > 0:
